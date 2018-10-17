@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.container {
+  width: 10.0000rem;
+  margin: 0 auto; }
+  .container .list {
+    font-size: 0.6250rem;
+    border: 0.0156rem red solid;
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg); }
+
+img {
+  width: 100%; }
+* {
+  padding: 0;
+  margin: 0; }
+
+.container {
+  width: 10.0000rem;
+  margin: 0 auto; }
+  .container .list {
+    font-size: 0.6250rem;
+    border: 0.0156rem red solid;
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg); }
+
+img {
+  width: 100%; }

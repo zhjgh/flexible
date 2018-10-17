@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.container {
+  width: 640px;
+  margin: 0 auto; }
+  .container .list {
+    font-size: 40px;
+    border: 1px red solid;
+    transform: rotate(15deg); }
+
+img {
+  width: 100%; }
