@@ -3,12 +3,14 @@
   margin: 0; }
 
 .container {
-  width: 640px;
+  width: 750px;
   margin: 0 auto; }
-  .container .list {
-    font-size: 40px;
-    border: 1px red solid;
-    transform: rotate(15deg); }
+  .container div {
+    font-size: 16px; }
+    [data-dpr="2"] .container div {
+      font-size: 32px; }
+    [data-dpr="3"] .container div {
+      font-size: 48px; }
 
 img {
   width: 100%; }

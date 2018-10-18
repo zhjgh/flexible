@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');
 var pngcrush = require('imagemin-pngcrush');
 var minifycss = require('gulp-minify-css');
@@ -8,20 +7,22 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var notify = require('gulp-notify');
 var autoprefixer = require('gulp-autoprefixer');
-var rem = require('gulp-rem-plus');
-var px2rem = require('gulp-px2rem-plugin');
+var sass = require('gulp-sass');
+var postcss = require('gulp-postcss');
+var px2rem = require('postcss-px2rem');
 
 //编译sass文件
 gulp.task('sass', function(){
   return gulp.src('src/sass/*.scss')
   .pipe(sass())
-  .pipe(gulp.dest('src/css/'))
+	.pipe(gulp.dest('src/css/'))
 })
 
 // 合并、压缩、重命名css
 gulp.task('css', function() {
+	var processors = [px2rem({remUnit: 75})];
 	return gulp.src('src/css/*.css')
-		.pipe(px2rem())
+		.pipe(postcss(processors))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
